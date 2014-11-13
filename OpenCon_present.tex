@@ -215,17 +215,16 @@
 \begin{flushright}
   \Large\mbox{\textit{... in Computational Research}}
 \end{flushright}
-\vspace{0.6cm} \normalsize
+\vspace{0.3cm} \normalsize
 
 \begin{figure}
-\centering
-\includegraphics[0.8\textwidth]{reproducibility_spectrum.png}
+
+\includegraphics[width=1.0\textwidth]{reproducibility_spectrum_clean.png}
 \end{figure}
 
-\vspace{0.3cm}
 \large
 \begin{columns}[t]
-  \begin{column}[t]{0.5\textwidth} 
+  \begin{column}[t]{0.4\textwidth} 
     \onslide<2->
     \begin{itemize}
       \item[] reproduction from\\ descriptions in\\ research article
@@ -238,8 +237,10 @@
     \end{itemize}
 
     \large
+   
   \end{column}
-  \begin{column}[t]{0.5\textwidth} 
+  \hfill
+  \begin{column}[t]{0.45\textwidth} 
     \onslide<4->
     \begin{itemize}
       \item[] same code,\\ \only<5-8>{same machine, }
@@ -252,7 +253,7 @@
       \item[]  \onslide<1->\textcolor{white}{-----} \only<7>{
         \Large\textcolor{Green}{\textbf{\emph{Easy!}}}}
       \only<8->{\Large\textcolor{Green}{\textbf{\emph{\sout{Easy!}}}}}
-        \onslide<8-> \textcolor{white}{-} \textcolor{red}{\textbf{\emph{if only!}}}
+        \onslide<8->  \textcolor{red}{\textbf{\emph{if only!}}}
     \end{itemize}
 
   \end{column}
@@ -263,66 +264,6 @@
 \end{frame}
 
 
-
-
-
-\begin{frame}{Spectrum of Reproducibility}
-
-\begin{flushright}
-  \Large\mbox{\textit{... in Computational Research}}
-\end{flushright}
-\vspace{0.6cm} \normalsize
-
-% \begin{center}
-%   Original computation $\longrightarrow$
-% \end{center}
-% \vspace{-0.3cm}
---------------------------------------------------------------------------------
-
-\onslide<1-3>\textcolor{white}{---------}x
-\onslide<4->\textcolor{white}{-----------------------------------------------}x \onslide<1->
---------------------------------------------------------------------------------
-
-
-\vspace{0.3cm}
-\large
-\begin{columns}[t]
-  \begin{column}[t]{0.5\textwidth} 
-    \onslide<2->
-    \begin{itemize}
-      \item[] reproduction from\\ descriptions in\\ research article
-    \end{itemize}
-    \vspace{0.2cm}
-
-    \onslide<3-> 
-    \begin{itemize}
-      \item[] \textcolor{white}{-----}\Large\textcolor{red}{\textbf{\emph{Tough!}}}
-    \end{itemize}
-
-    \large
-  \end{column}
-  \begin{column}[t]{0.5\textwidth} 
-    \onslide<4->
-    \begin{itemize}
-      \item[] same code,\\ \only<5-8>{same machine, }
-        \only<9->{\sout{same machine}, }\textcolor{white}{-----}\\ \only<6-9>{same
-          researcher}\only<10->{\sout{same researcher}}
-    \end{itemize}
-    \vspace{0.2cm}
-
-    \begin{itemize}
-      \item[]  \onslide<1->\textcolor{white}{-----} \only<7>{
-        \Large\textcolor{Green}{\textbf{\emph{Easy!}}}}
-      \only<8->{\Large\textcolor{Green}{\textbf{\emph{\sout{Easy!}}}}}
-        \onslide<8-> \textcolor{white}{-} \textcolor{red}{\textbf{\emph{if only!}}}
-    \end{itemize}
-
-  \end{column}
-\end{columns}
-
-\vspace{1cm}
-
-\end{frame}
 
 
 \begin{frame}{The problems...  \onslide<5->{\vspace{-0.94cm} 
@@ -347,11 +288,11 @@
     \end{column}
     \begin{column}{0.55\textwidth}
       \onslide<6->
-      \vspace{-1.2cm}
+      \vspace{-1.cm}
       \begin{center}
         \textbf{\textit{laboratory notebook}}
       \end{center}
-      \vspace{-0.75cm}
+      \vspace{-0.95cm}
       \begin{figure}
         \centering
 
@@ -405,15 +346,15 @@
        \begin{arrowlist}
          \itemsep14pt
          \item<4-> assumes that code is under version control
-         \item<6-> capture information about computation
-         \item<7-> make the information accessible through a command line
+         \item<5-> capture information about computation
+         \item<6-> make the information accessible through a command line
            and web interface
        \end{arrowlist}
        \vspace{1cm}
 
      \end{column}
      \begin{column}{0.42\textwidth}
-       \only<5>{
+       \only<4>{
          \vspace{-1.7cm}
        \begin{center}
          \begin{figure}
@@ -430,14 +371,14 @@
        % mercurial free software
        }
        
-       \only<6>{
+       \only<5>{
          \vspace{-2.15cm}
          \begin{center}
            \texttt{\textbf{\huge smt run}}
          \end{center}
          }
 
-       \only<7->{ 
+       \only<6>{ 
        \vspace{-1.4cm}
        \begin{center}
          \begin{figure}
