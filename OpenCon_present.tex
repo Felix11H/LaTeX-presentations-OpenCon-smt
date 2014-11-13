@@ -54,7 +54,7 @@
 
 
 \usepackage{caption}
-
+\usepackage{picture}
 
 
 % ------------------------ tikz ------------------------- %
@@ -302,11 +302,16 @@
 
         \includegraphics{victor_horsely.jpg}
         % http://wellcomeimages.org/indexplus/image/M0016267.html
+        \vspace{-0.28cm}
+        \caption*{\tiny \textcopyright Wellcome Library, London 
+             \href{http://creativecommons.org/licenses/by/4.0/}{CC BY
+               4.0}}
       \end{figure}
 
       \onslide<7->
+      \vspace{-0.72cm}
       \begin{center}
-        \textit{... in traditional experiment based research}.
+        \textit{... in traditional, experiment-based research}.
       \end{center}
     \end{column}
 
@@ -353,12 +358,12 @@
 
      \end{column}
      \begin{column}{0.42\textwidth}
-       \only<5-6>{
-         \vspace{-0.8cm}
+       \only<5>{
+         \vspace{-1.7cm}
        \begin{center}
          \begin{figure}
            \includegraphics[width=2.6cm]{git_logo.png}
-           \caption*{\tiny \textcopyright Jason Lon
+           \caption*{\tiny \textcopyright Jason Long
              \href{http://creativecommons.org/licenses/by/3.0/}{CC BY
                3.0}}
          \end{figure}
@@ -366,8 +371,17 @@
        \vfill
        \includegraphics[width=2.2cm]{mercurial_logo.png}
        \end{center}
+       % git logo CC BY 3.0 Jason Long http://git-scm.com/downloads/logos
+       % mercurial free software
        }
        
+       \only<6>{
+         \vspace{-2.15cm}
+         \begin{center}
+           \texttt{\textbf{\huge smt run}}
+         \end{center}
+         }
+
        \only<7->{ 
        \vspace{-1.4cm}
        \begin{center}
@@ -380,13 +394,39 @@
    \end{columns}
 
    \vspace{7cm}
+  
 
+
+
+
+\end{frame}
+
+\begin{frame}{\includegraphics[width=2.0cm]{sumatra_logo_up.png}
+     \textcolor{white}{-} -\textcolor{white}{-} a tool for
+     Reproducible Research}
     
+   \large
+   \begin{columns}
+     \begin{column}{0.58\textwidth}
+       By capturing
+       \vspace{0.3cm}
+       \begin{itemize}
+         \itemsep12pt
+         \item[] - version of the code
+         \item[] - input data
+         \item[] - output data
+         \item[] - parameters  \onslide<2->\makebox(0,0){\put(0,5.2\normalbaselineskip){%
+               $\left.\rule{0pt}{8.1\normalbaselineskip}\right\}$ foo }}
+       \end{itemize}
+
+     \end{column}
+     \begin{column}{0.42\textwidth}
+     
+     \end{column}
+   \end{columns}
 
 
-   % git logo CC BY 3.0 Jason Long http://git-scm.com/downloads/logos
-   % mercurial free software
-
+        
 
 \end{frame}
 
