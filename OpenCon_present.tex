@@ -439,46 +439,58 @@
      main node/.style={circle, draw}]
 
 		
-     \node (crp) at (0,0) {computational research project};
-
-     \node (sc) at (-3.8,-2.43) {scientific code};
-     \node (in) at (3.8,-2.07) {input data};
-     \node (out) at (3.8,-3.1) {output data};
-
-
+     \node[draw,rectangle] (crp) at (0,0) {\mbox{computational research project}};
      \onslide<2->
+     \node (sc) at (-3.8,-2.25) {scientific code};
+     \onslide<3->
+     \node (in) at (3.8,-1.7) {input data};
+     \onslide<4->
+     \node (out) at (3.88,-2.8) {output data};
+
+
+     % \onslide<2->
+     % \path[every node/.style={font=\sffamily\small, circle,
+     %   draw}]
+     %   (crp.west) edge  (sc.north);
+
+
+     % \onslide<2->
+     % \path[every node/.style={font=\sffamily\small, circle,
+     %   draw}]
+     %   (crp.east) edge  (in.north);
+
+     
+
+
+     \onslide<5->
+     \node (smt) at (0,-2.25) {\includegraphics[width=2.0cm]{sumatra_logo.png}};
+
      \path[every node/.style={font=\sffamily\small, circle,
-       draw}]
-       (crp.west) edge  (sc.north);
-
-
-     \onslide<2->
+       draw}, very thick, color=gray]
+       (in.west) edge 	[out=180,in=0] (smt.east);
+ 
      \path[every node/.style={font=\sffamily\small, circle,
-       draw}]
-       (crp.east) edge  (in.north);
+       draw}, very thick, color=gray]
+       (smt.east) edge [out=0,in=180] (out.west);
 
-
-     \onslide<2->
      \path[every node/.style={font=\sffamily\small, circle,
-       draw}]
-       (in.west) edge [bend right=15] (sc.12);
-
-     \onslide<3-> 
-     \path[every node/.style={font=\sffamily\small, circle,
-       draw}]
-       (sc.348) edge node[auto]{Sumatra} [bend right=15] (out.west);
-
-
-
+       draw}, very thick, color=gray, <->]
+       (smt.west) edge (sc.east);
        
 
+
      \onslide<7->
-     \node (github) at (3.8, -5)
+     \node (github) at (3.88, -5)
      {\includegraphics[width=2cm]{GitHub.png}};
 
      \path[every node/.style={font=\sffamily\small, circle,
-       draw}]
+       draw}, very thick, color=gray]
        (out.south) edge (github.north);
+
+     \onslide<9->
+     \path[every node/.style={font=\sffamily\small, circle,
+       draw}, very thick, color=gray]
+       (smt.south) edge [out=270,in=180] (github.west);
                         
      % \useasboundingbox (c) rectangle (-2,1.5) --
      % (c) rectangle (1.5,1.5);
