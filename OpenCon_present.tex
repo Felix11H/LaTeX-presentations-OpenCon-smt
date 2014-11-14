@@ -59,9 +59,9 @@
 
 % ------------------------ tikz ------------------------- %
 
-% \usepackage{tikz}
-% \usetikzlibrary{positioning}
-% \usetikzlibrary{arrows}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows}
 
 
 
@@ -408,16 +408,17 @@
        \vspace{0.3cm}
        \begin{itemize}
          \itemsep12pt
-         \item[] - version of the code
-         \item[] - input data
-         \item[] - output data
-         \item[] - parameters  \onslide<2->\makebox(0,0){\put(0,5.2\normalbaselineskip){%
-               $\left.\rule{0pt}{8.1\normalbaselineskip}\right\}$ foo }}
+         \item<2->[] - version of the code
+         \item<3->[] - input data
+         \item<4->[] - output data
+         \item<5->[] - parameters \textcolor{white}{------------} \onslide<6->\makebox(0,0){\put(0,9.2\normalbaselineskip){%
+               $\left.\rule{0pt}{4.1\normalbaselineskip}\right\}$ }}
        \end{itemize}
 
      \end{column}
+
      \begin{column}{0.42\textwidth}
-     
+         \onslide<6->Full replicability of results
      \end{column}
    \end{columns}
 
@@ -427,10 +428,98 @@
 \end{frame}
 
 \begin{frame}{\includegraphics[width=2.0cm]{sumatra_logo_up.png}
-     \textcolor{white}{-} -\textcolor{white}{-} as an Open Science tool}
+     \textcolor{white}{-} -\textcolor{white}{-} as an Open Science
+     tool}
+   \large
+   % \begin{center}
+   %   computational research project
+   % \end{center}
+   \begin{center}
+   \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=1.5cm,
+     main node/.style={circle, draw}]
 
+		
+     \node (crp) at (0,0) {computational research project};
+
+     \node (sc) at (-3.8,-2.43) {scientific code};
+     \node (in) at (3.8,-2.07) {input data};
+     \node (out) at (3.8,-3.1) {output data};
+
+
+     \onslide<2->
+     \path[every node/.style={font=\sffamily\small, circle,
+       draw}]
+       (crp.west) edge  (sc.north);
+
+
+     \onslide<2->
+     \path[every node/.style={font=\sffamily\small, circle,
+       draw}]
+       (crp.east) edge  (in.north);
+
+
+     \onslide<2->
+     \path[every node/.style={font=\sffamily\small, circle,
+       draw}]
+       (in.west) edge [bend right=15] (sc.12);
+
+     \onslide<3-> 
+     \path[every node/.style={font=\sffamily\small, circle,
+       draw}]
+       (sc.348) edge [bend right=15] (out.west);
+
+
+
+       
+
+     \onslide<7->
+     \node (github) at (3.8, -5)
+     {\includegraphics[width=2cm]{GitHub.png}};
+
+     \path[every node/.style={font=\sffamily\small, circle,
+       draw}]
+       (out.south) edge (github.north);
+                        
+     % \useasboundingbox (c) rectangle (-2,1.5) --
+     % (c) rectangle (1.5,1.5);
+
+     % \path[every node/.style={font=\sffamily\small, circle,
+     %   draw}]
+     % (a.20) edge [bend left=15] (b.160)
+     % (b.-160) edge [bend right=15] (a.-20) 
+     % (a) edge [bend right=15] (c)
+     % (b.-120) edge [bend left=15] (c.40)
+     % (b.-80) edge [bend left=15] (c.0);
+  
+   \end{tikzpicture}
+   \end{center}
+
+
+
+ % \begin{columns}
+ %    \begin{column}
    % github logo = public domain 
-\end{frame}
+   % figshare logo CC BY 3.0  http://creativecommons.org/licenses/by/3.0/
+ \end{frame}
+
+
+
+% \begin{frame}{Resources}
+%   \begin{columns}
+%     \begin{column}
+%       Sumatra
+%       Website: \href{http://www.neuralensemble.org/sumatra/}
+%       Maintainer: Andrew Davison
+      
+%       Publication:
+%     \end{column}
+
+%     \begin{column}{0.5\textwidth}
+%       About the presenter:
+%         Felix Hoffmann
+%         Website: \href{http://felix11h.github.io/}        
+%     \end{column}
+% \end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
