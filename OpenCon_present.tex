@@ -61,8 +61,7 @@
 
 \usepackage{tikz}
 \usetikzlibrary{positioning}
-\usetikzlibrary{arrows}
-
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,matrix,calc}
 
 
 % ----------------------- minted ------------------------ %
@@ -467,22 +466,31 @@
 
      \path[every node/.style={font=\sffamily\small, circle,
        draw}, very thick, color=gray]
-       (in.west) edge 	[out=180,in=0] (smt.east);
+       (in.west) edge 	[out=180,in=0] ($(smt.east)+(0,0.1)$);
  
      \path[every node/.style={font=\sffamily\small, circle,
        draw}, very thick, color=gray]
-       (smt.east) edge [out=0,in=180] (out.west);
+       ($(smt.east)+(0,-0.1)$) edge [out=0,in=180] (out.west);
 
      \path[every node/.style={font=\sffamily\small, circle,
-       draw}, very thick, color=gray, <->]
-       (smt.west) edge (sc.east);
+       draw}, very thick, color=gray, <-]
+       ($(smt.west)+(0,-0.1)$) edge ($(sc.east)+(0,-0.1)$)
+       ($(sc.east)+(0,0.1)$) edge  ($(smt.west)+(0,0.1)$);
        
 
+     \onslide<6->
+     \node (figs) at (-3.8, -5)
+     {\includegraphics[width=3.7cm]{GitHub_padded.png}};
+
+     \onslide<6-8>
+     \path[every node/.style={font=\sffamily\small, circle,
+       draw}, very thick, color=gray]
+       (sc.south) edge (figs.north);
 
      \onslide<7->
      \node (github) at (3.88, -5)
-     {\includegraphics[width=2cm]{GitHub.png}};
-
+     {\includegraphics[width=3.7cm]{figshare-main.png}};
+     \onslide<7-8>
      \path[every node/.style={font=\sffamily\small, circle,
        draw}, very thick, color=gray]
        (out.south) edge (github.north);
@@ -490,8 +498,10 @@
      \onslide<9->
      \path[every node/.style={font=\sffamily\small, circle,
        draw}, very thick, color=gray]
-       (smt.south) edge [out=270,in=180] (github.west);
+       (smt.south) edge [out=270,in=180] (github.west)
+       (smt.south) edge [out=270,in=0] (figs.east);
                         
+
      % \useasboundingbox (c) rectangle (-2,1.5) --
      % (c) rectangle (1.5,1.5);
 
