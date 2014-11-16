@@ -186,26 +186,73 @@
 \definecolor{tg}{rgb}{0.35,0.35,0.35}
 
 
-\begin{frame} 
-  \titlepage
-\end{frame}
+% \begin{frame} 
+%   \titlepage
+% \end{frame}
 
 \begin{frame}
   \begin{center} 
 
-    \vspace{5.95cm}
+    \Large \includegraphics[width=2.0cm]{sumatra_logo_up.png} \textcolor{white}{-}as an
+    Open Science tool
+      \end{center}
+      \vspace{0.35cm}
 
-    \includegraphics[width=2.2cm]{by-nc-sa_eu-eps-converted-to.pdf}
+    \begin{columns}[t]
+      \begin{column}{0.4\textwidth}        
+        \textbf{Presenter}
+        \normalsize
+        \vspace{0.18cm}
+        \begin{itemize}[leftmargin=0.6cm]
+          \item[] Felix Hoffmann
+          \item[] @Felix11H
+          \item[] \href{http://felix11h.github.io/}{felix11h.github.io/}
+        \end{itemize}
 
-    \vspace{0.25cm}
+        \vspace{0.38cm}
+        \textbf{Slides}
+        \normalsize
+        \vspace{0.18cm}
+        \begin{itemize}[leftmargin=0.6cm]
+          \item[] Slideshare: \href{http://tiny.cc/opencon-smt}{tiny.cc/opencon-smt}
+          \item[] Source: \href{http://tiny.cc/github-slides}{tiny.cc/github-slides}
+        \end{itemize}
 
-    \small
-    This work is licensed under a
-    \href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{Creative
-      Commons Attribution-NonCommercial-ShareAlike 4.0 International
-      License}.
 
-  \end{center}
+\end{column}
+\begin{column}{0.64\textwidth}
+  \textbf{Sumatra Resources}
+  \vspace{0.28cm}
+    \normalsize 
+    \begin{itemize}[leftmargin=0.6cm]
+      \item[] Website:
+    \href{http://neuralensemble.org/sumatra/}{neuralensemble.org/sumatra/}\\
+    \item[]Getting started: \href{http://packages.python.org/Sumatra/}{packages.python.org/Sumatra/}\\
+    \item[]Repository:
+    \href{http://bitbucket.org/apdavison/sumatra/}{bitbucket.org/apdavison/sumatra/}
+    \item[] Mailinglist: \\\href{http://tiny.cc/smt-user}{tiny.cc/smt-user}
+    \item[] Maintainer: Andrew Davison 
+
+
+\end{itemize}
+
+
+
+\end{column}
+\end{columns}
+
+\vspace{0.3cm}
+\begin{center}
+  \includegraphics[width=1.7cm]{ccby40.png}
+
+  \vspace{0.1cm}
+
+  \scriptsize This work is licensed under a
+  \href{https://creativecommons.org/licenses/by/4.0/}{Creative
+    Commons Attribution 4.0 International License.}
+\end{center}
+
+
 \end{frame}
 
 
@@ -264,7 +311,6 @@
 
 
 
-
 \begin{frame}{The problems...  \onslide<5->{\vspace{-0.94cm} 
       \begin{flushright}
         ... the solution \textcolor{white}{--}
@@ -276,7 +322,7 @@
   \large
   \begin{columns}
     \begin{column}{0.4\textwidth}
-      \vspace{-1.6cm}
+      \vspace{0.46cm}
       \begin{itemize}[leftmargin=2pt]
         \itemsep18pt
         \item<1->[] Which version of my code did I use?
@@ -284,24 +330,39 @@
         \item<3->[] \enquote{It worked yesterday.}
         \item<4->[] \enquote{Why did I do that?}
       \end{itemize}
+      \vspace{3cm}
     \end{column}
     \begin{column}{0.55\textwidth}
-      \onslide<6->
-      \vspace{-1.cm}
+
+      \vspace{-1.35cm}
+
+
+      \only<1-4>{
+        \vspace{0.4cm}
+        \begin{figure}
+          \centering        
+          \includegraphics[width=6.6cm]{phd_filenames.png}
+          \vspace{-0.28cm}
+          \captionsetup{justification=centering}
+          \caption*{\tiny \enquote{Piled Higher and Deeper} by Jorge Cham
+\href{www.phdcomics.com}{www.phdcomics.com}}
+      \end{figure}}
+
+      \only<6->{
+      \vspace{0.01cm}
       \begin{center}
         \textbf{\textit{laboratory notebook}}
       \end{center}
-      \vspace{-0.95cm}
+      \vspace{-1.25cm}
       \begin{figure}
-        \centering
-
+        \centering        
         \includegraphics{victor_horsely.jpg}
         % http://wellcomeimages.org/indexplus/image/M0016267.html
         \vspace{-0.28cm}
         \caption*{\tiny \textcopyright Wellcome Library, London 
              \href{http://creativecommons.org/licenses/by/4.0/}{CC BY
                4.0}}
-      \end{figure}
+      \end{figure}}
 
       \onslide<7->
       \vspace{-0.72cm}
@@ -433,7 +494,8 @@
    % \begin{center}
    %   computational research project
    % \end{center}
-
+\begin{columns}
+  \begin{column}{0.94\textwidth}
    \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=1.5cm,
      main node/.style={circle, draw}]
 
@@ -470,7 +532,7 @@
      \node (figs) at (-3.8, -5)
      {\includegraphics[width=3.7cm]{GitHub_padded.png}};
 
-     \onslide<6-8>
+     \onslide<6-7>
      \path[every node/.style={font=\sffamily\small, circle,
        draw}, very thick, color=gray]
        (sc.south) edge (figs.north);
@@ -478,16 +540,19 @@
      \onslide<7->
      \node (github) at (3.88, -5)
      {\includegraphics[width=3.7cm]{figshare-main.png}};
-     \onslide<7-8>
+     \onslide<7>
      \path[every node/.style={font=\sffamily\small, circle,
        draw}, very thick, color=gray]
        (out.south) edge (github.north);
 
-     \onslide<9->
+     \onslide<8->
      \path[every node/.style={font=\sffamily\small, circle,
        draw}, very thick, color=gray]
        (smt.south) edge [out=270,in=180] (github.west)
        (smt.south) edge [out=270,in=0] (figs.east);
+      
+       \onslide<9->
+       \node[align=center] (qm) at (0,-5.7) {Data\\ provenance!};
                         
 
      % \useasboundingbox (c) rectangle (-2,1.5) --
@@ -502,7 +567,11 @@
      % (b.-80) edge [bend left=15] (c.0);
   
    \end{tikzpicture}
-
+   \end{column}
+   \hfill
+   \begin{column}{0.06\textwidth}
+     \end{column}
+   \end{columns}
 
 
 
@@ -512,6 +581,71 @@
    % figshare logo CC BY 3.0  http://creativecommons.org/licenses/by/3.0/
  \end{frame}
 
+
+
+\begin{frame}
+  \begin{center} 
+
+    \Large \textit{Thank you!}
+      \end{center}
+      \vspace{0.35cm}
+
+    \begin{columns}[t]
+      \begin{column}{0.4\textwidth}        
+        \textbf{Presenter}
+        \normalsize
+        \vspace{0.18cm}
+        \begin{itemize}[leftmargin=0.6cm]
+          \item[] Felix Hoffmann
+          \item[] @Felix11H
+          \item[] \href{http://felix11h.github.io/}{felix11h.github.io/}
+        \end{itemize}
+
+        \vspace{0.38cm}
+        \textbf{Slides}
+        \normalsize
+        \vspace{0.18cm}
+        \begin{itemize}[leftmargin=0.6cm]
+          \item[] Slideshare: \href{http://tiny.cc/opencon-smt}{tiny.cc/opencon-smt}
+          \item[] Source: \href{http://tiny.cc/github-slides}{tiny.cc/github-slides}
+        \end{itemize}
+
+
+\end{column}
+\begin{column}{0.64\textwidth}
+  \textbf{Sumatra Resources}
+  \vspace{0.28cm}
+    \normalsize 
+    \begin{itemize}[leftmargin=0.6cm]
+      \item[] Website:
+    \href{http://neuralensemble.org/sumatra/}{neuralensemble.org/sumatra/}\\
+    \item[]Getting started: \href{http://packages.python.org/Sumatra/}{packages.python.org/Sumatra/}\\
+    \item[]Repository:
+    \href{http://bitbucket.org/apdavison/sumatra/}{bitbucket.org/apdavison/sumatra/}
+    \item[] Mailinglist: \\\href{http://tiny.cc/smt-user}{tiny.cc/smt-user}
+    \item[] Maintainer: Andrew Davison 
+
+
+\end{itemize}
+
+
+
+\end{column}
+\end{columns}
+
+\vspace{0.3cm}
+\begin{center}
+  \includegraphics[width=1.7cm]{ccby40.png}
+
+  \vspace{0.1cm}
+
+  \scriptsize This work is licensed under a
+  \href{https://creativecommons.org/licenses/by/4.0/}{Creative
+    Commons Attribution 4.0 International License.}
+\end{center}
+
+
+\end{frame}
 
 
 % \begin{frame}{Resources}
