@@ -1,0 +1,63 @@
+\begin{frame}{Spectrum of Reproducibility}
+
+  \begin{flushright}
+    \Large\mbox{\textit{... in Computational Research}}
+  \end{flushright}
+  \vspace{0.3cm} \normalsize
+
+  \begin{figure}
+    \includegraphics[width=1.0\textwidth]{%
+      reproducibility_spectrum_clean.png}
+  \end{figure}
+
+  \large
+  \begin{columns}[t]
+    %%%%
+    \begin{column}[t]{0.4\textwidth} 
+      \onslide<2->
+      \begin{itemize}
+        \item[] reproduction from\\ descriptions in\\ research article
+      \end{itemize}
+      \vspace{0.2cm}
+
+      \onslide<3-> 
+      \begin{itemize}
+        \item[] \textcolor{white}{-----}%
+          \Large\textcolor{red}{\textbf{\emph{Tough!}}}
+      \end{itemize}
+      \large      
+    \end{column}
+    %%%%
+    \hfill
+    %%%% 
+    \begin{column}[t]{0.45\textwidth} 
+      \onslide<4->
+      \begin{itemize}
+        \item[] same code,\\% 
+          \only<5-8>{same machine, }%
+          \only<9->{\sout{same machine}, }\textcolor{white}{-----}\\%
+          \only<6-9>{same researcher}\only<10->{\sout{same researcher}}
+      \end{itemize}
+
+      \vspace{0.2cm}
+
+      \begin{itemize}
+      \item[]  \onslide<1->\textcolor{white}{-----} \only<7>{
+          \Large\textcolor{Green}{\textbf{\emph{Easy!}}}}
+        \only<8->{\Large\textcolor{Green}{\textbf{\emph{\sout{Easy!}}}}}
+        \onslide<8->  \textcolor{red}{\textbf{\emph{if only!}}}
+      \end{itemize}
+
+    \end{column}
+    %%%%
+  \end{columns}
+
+  \vspace{1cm}
+
+\end{frame}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../OpenCon_present"
+%%% End: 

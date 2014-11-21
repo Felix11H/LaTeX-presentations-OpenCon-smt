@@ -1,0 +1,92 @@
+
+
+\begin{frame}{\includegraphics[width=2.0cm]{sumatra_logo_up.png}
+     \textcolor{white}{-} -\textcolor{white}{-} as an Open Science
+     tool}
+
+   \large
+
+   \begin{columns}
+     %%%%
+     \begin{column}{0.94\textwidth}
+   
+       \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,%
+         node distance=1.5cm,main node/.style={circle, draw}]
+
+		
+         \node[draw,rectangle] (crp) at (0,0) {%
+           \mbox{computational research project}};
+         
+         \onslide<2->
+         \node (sc) at (-3.8,-2.25) {scientific code};
+         \onslide<3->
+         \node (in) at (3.8,-1.7) {input data};
+         \onslide<4->
+         \node (out) at (3.88,-2.8) {output data};
+
+    
+
+
+         \onslide<5->
+         \node (smt) at (0,-2.25) {%
+           \includegraphics[width=2.0cm]{sumatra_logo.png}};
+
+         \path[every node/.style={font=\sffamily\small, circle,
+           draw}, very thick, color=gray]
+         (in.west) edge [out=180,in=0] ($(smt.east)+(0,0.1)$);
+         
+         \path[every node/.style={font=\sffamily\small, circle,
+           draw}, very thick, color=gray]
+         ($(smt.east)+(0,-0.1)$) edge [out=0,in=180] (out.west);
+
+         \path[every node/.style={font=\sffamily\small, circle,
+           draw}, very thick, color=gray, <-]
+         ($(smt.west)+(0,-0.1)$) edge ($(sc.east)+(0,-0.1)$)
+         ($(sc.east)+(0,0.1)$) edge  ($(smt.west)+(0,0.1)$);
+         
+
+         \onslide<6->
+         \node (figs) at (-3.8, -5) {%
+           \includegraphics[width=3.7cm]{GitHub_padded.png}};
+
+         \onslide<6-7>
+         \path[every node/.style={font=\sffamily\small, circle,
+           draw}, very thick, color=gray]
+         (sc.south) edge (figs.north);
+
+         \onslide<7->
+         \node (github) at (3.88, -5)
+         {\includegraphics[width=3.7cm]{figshare-main.png}};
+
+         \onslide<7>
+         \path[every node/.style={font=\sffamily\small, circle,
+           draw}, very thick, color=gray]
+         (out.south) edge (github.north);
+
+         \onslide<8->
+         \path[every node/.style={font=\sffamily\small, circle,
+           draw}, very thick, color=gray]
+         (smt.south) edge [out=270,in=180] (github.west)
+         (smt.south) edge [out=270,in=0] (figs.east);
+         
+         \onslide<9->
+         \node[align=center] (qm) at (0,-5.7) {Data\\ provenance!};
+         
+       \end{tikzpicture}
+
+     \end{column}
+     %%%% 
+     \hfill
+     %%%% 
+     \begin{column}{0.06\textwidth}
+     \end{column}
+     %%%% 
+   \end{columns}
+
+ \end{frame}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../OpenCon_present"
+%%% End: 
